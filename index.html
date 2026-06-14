@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zeta | Resumo Financeiro</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-[#08090b] text-white">
+
+  <main class="min-h-screen lg:flex">
+
+    <!-- MENU LATERAL -->
+    <aside class="w-full lg:w-64 border-b lg:border-b-0 lg:border-r border-white/10 bg-[#0d1014] p-5">
+      
+      <div class="flex items-center gap-3 mb-8">
+        <div class="logo-box">Z</div>
+        <div>
+          <h1 class="text-2xl font-bold leading-none">Zeta</h1>
+          <p class="text-xs text-gray-400 mt-1">controle financeiro inteligente</p>
+        </div>
+      </div>
+
+      <nav class="space-y-3">
+        <a href="#" class="nav-item nav-active">
+          <span class="nav-icon"></span>
+          <div>
+            <p class="font-semibold">Dashboard</p>
+            <p class="text-xs text-gray-400">Resumo</p>
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"></span>
+          <div>
+            <p class="font-semibold">Situação</p>
+            <p class="text-xs text-gray-400">Dados financeiros</p>
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"></span>
+          <div>
+            <p class="font-semibold">Planejamento</p>
+            <p class="text-xs text-gray-400">Metas</p>
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"></span>
+          <div>
+            <p class="font-semibold">Recomendações</p>
+            <p class="text-xs text-gray-400">Sugestões</p>
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"></span>
+          <div>
+            <p class="font-semibold">Perfil</p>
+            <p class="text-xs text-gray-400">Conta</p>
+          </div>
+        </a>
+      </nav>
+
+      <div class="mt-8 lg:mt-32 glass-card p-4">
+        <p class="text-xs text-gray-400">Plano atual</p>
+        <div class="flex items-center justify-between mt-1">
+          <p class="font-bold">Essencial</p>
+          <span class="status-badge">Ativo</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="flex-1 p-5 md:p-8">
+
+      <!-- TOPO -->
+      <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">Resumo financeiro</h2>
+          <p class="text-gray-400 mt-2">Visualize sua situação mensal e acompanhe sinais importantes.</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="month-button">Abril 2026</button>
+          <div class="profile-button">R</div>
+        </div>
+      </header>
+
+      <!-- CARDS FINANCEIROS -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+
+        <article class="glass-card stat-card">
+          <p class="text-gray-400 text-sm">Receitas</p>
+          <h3 class="text-3xl font-bold mt-2">R$ 3.450</h3>
+          <div class="progress-bg mt-4">
+            <div class="progress-fill w-[72%]"></div>
+          </div>
+        </article>
+
+        <article class="glass-card stat-card">
+          <p class="text-gray-400 text-sm">Despesas</p>
+          <h3 class="text-3xl font-bold mt-2">R$ 2.630</h3>
+          <div class="progress-bg mt-4">
+            <div class="progress-fill w-[58%]"></div>
+          </div>
+        </article>
+
+        <article class="glass-card stat-card">
+          <p class="text-gray-400 text-sm">Dívidas</p>
+          <h3 class="text-3xl font-bold mt-2">R$ 1.240</h3>
+          <div class="progress-bg mt-4">
+            <div class="progress-fill w-[42%]"></div>
+          </div>
+        </article>
+
+        <article class="glass-card stat-card">
+          <p class="text-gray-400 text-sm">Saldo livre</p>
+          <h3 class="text-3xl font-bold mt-2">R$ 820</h3>
+          <div class="progress-bg mt-4">
+            <div class="progress-fill w-[36%]"></div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- ÁREA CENTRAL -->
+      <section class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-6">
+
+        <!-- GRÁFICO -->
+        <article class="glass-card p-5 xl:col-span-2">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+            <div>
+              <h3 class="text-xl font-bold">Receitas x despesas</h3>
+              <p class="text-sm text-gray-400">Comparativo dos últimos 6 meses</p>
+            </div>
+
+            <div class="flex items-center gap-4 text-sm">
+              <div class="flex items-center gap-2">
+                <span class="legend-dot bg-[#ffc400]"></span>
+                <span class="text-gray-300">Receita</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="legend-dot bg-gray-500"></span>
+                <span class="text-gray-300">Despesa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-area">
+            <div class="chart-group">
+              <div class="bar yellow h-[65%]"></div>
+              <div class="bar gray h-[48%]"></div>
+              <span>Nov</span>
+            </div>
+
+            <div class="chart-group">
+              <div class="bar yellow h-[72%]"></div>
+              <div class="bar gray h-[55%]"></div>
+              <span>Dez</span>
+            </div>
+
+            <div class="chart-group">
+              <div class="bar yellow h-[68%]"></div>
+              <div class="bar gray h-[54%]"></div>
+              <span>Jan</span>
+            </div>
+
+            <div class="chart-group">
+              <div class="bar yellow h-[86%]"></div>
+              <div class="bar gray h-[60%]"></div>
+              <span>Fev</span>
+            </div>
+
+            <div class="chart-group">
+              <div class="bar yellow h-[78%]"></div>
+              <div class="bar gray h-[56%]"></div>
+              <span>Mar</span>
+            </div>
+
+            <div class="chart-group">
+              <div class="bar yellow h-[66%]"></div>
+              <div class="bar gray h-[50%]"></div>
+              <span>Abr</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- DISTRIBUIÇÃO DE GASTOS -->
+        <article class="glass-card p-5">
+          <h3 class="text-xl font-bold">Distribuição de gastos</h3>
+          <p class="text-sm text-gray-400 mb-5">Categorias mais relevantes no mês</p>
+
+          <div class="space-y-5">
+
+            <div class="expense-row">
+              <div class="expense-info">
+                <span class="expense-icon">⌂</span>
+                <p>Moradia</p>
+              </div>
+              <div class="expense-bar">
+                <div class="expense-fill w-[80%]"></div>
+              </div>
+              <strong>35%</strong>
+            </div>
+
+            <div class="expense-row">
+              <div class="expense-info">
+                <span class="expense-icon">▣</span>
+                <p>Transporte</p>
+              </div>
+              <div class="expense-bar">
+                <div class="expense-fill w-[58%]"></div>
+              </div>
+              <strong>22%</strong>
+            </div>
+
+            <div class="expense-row">
+              <div class="expense-info">
+                <span class="expense-icon">◉</span>
+                <p>Alimentação</p>
+              </div>
+              <div class="expense-bar">
+                <div class="expense-fill w-[48%]"></div>
+              </div>
+              <strong>18%</strong>
+            </div>
+
+            <div class="expense-row">
+              <div class="expense-info">
+                <span class="expense-icon">◇</span>
+                <p>Lazer</p>
+              </div>
+              <div class="expense-bar">
+                <div class="expense-fill w-[38%]"></div>
+              </div>
+              <strong>15%</strong>
+            </div>
+
+            <div class="expense-row">
+              <div class="expense-info">
+                <span class="expense-icon">•••</span>
+                <p>Outros</p>
+              </div>
+              <div class="expense-bar">
+                <div class="expense-fill w-[28%]"></div>
+              </div>
+              <strong>10%</strong>
+            </div>
+
+          </div>
+        </article>
+
+      </section>
+
+      <!-- RODAPÉ DE INFORMAÇÕES -->
+      <section class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+
+        <!-- PRÓXIMAS AÇÕES -->
+        <article class="glass-card p-5">
+          <h3 class="text-xl font-bold mb-4">Próximas ações</h3>
+
+          <div class="action-item">
+            <span class="check-circle">✓</span>
+            <div>
+              <p class="font-semibold">Rever assinatura de streaming</p>
+              <p class="text-sm text-gray-400">Economia prevista: R$ 49,90</p>
+            </div>
+          </div>
+
+          <div class="action-item">
+            <span class="check-circle">✓</span>
+            <div>
+              <p class="font-semibold">Separar reserva mensal</p>
+              <p class="text-sm text-gray-400">Meta sugerida: R$ 180</p>
+            </div>
+          </div>
+
+          <div class="action-item">
+            <span class="check-circle">✓</span>
+            <div>
+              <p class="font-semibold">Negociar dívida do cartão</p>
+              <p class="text-sm text-gray-400">Prioridade alta</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ALERTAS -->
+        <article class="glass-card p-5">
+          <h3 class="text-xl font-bold mb-4">Alertas do mês</h3>
+
+          <div class="alert-item">
+            <span class="alert-dot bg-[#ffc400]"></span>
+            <p>Redução no valor de receita</p>
+          </div>
+
+          <div class="alert-item">
+            <span class="alert-dot bg-red-500"></span>
+            <p>Dívida consome 35% da renda</p>
+          </div>
+
+          <div class="alert-item">
+            <span class="alert-dot bg-green-500"></span>
+            <p>Reserva em evolução positiva</p>
+          </div>
+        </article>
+
+      </section>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
